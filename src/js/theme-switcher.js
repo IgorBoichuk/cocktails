@@ -97,7 +97,7 @@ function onBurgerThemeSwitcher() {
   );
   switcherDot.forEach(item => item.classList.toggle('switcher-dot-dark'));
   darkThemeText.forEach(item => item.classList.toggle('dark-theme'));
-  // burgerMenuBtnIcon.classList.toggle('burger-menu-btn-icon-dark');
+  burgerMenuBtnIcon.classList.toggle('burger-menu-btn-icon-dark');
   burgerMenuArrowIcon.classList.toggle('burger-menu-btn-icon-dark');
   darkThemeGreyText.forEach(item => item.classList.toggle('dark-theme-grey'));
   mobileMenu.classList.toggle('dark-size');
