@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorite cocktails</title>
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <link rel="icon" href="./images/favicon.ico" />
+  </head>
+  <body>
+    <include src="./partials/header.html"></include>
+    <section class="main-section container flex-1">
+      <h1 class="base-title dark-theme-text base-title--cocktails">
+        Favorite cocktails
+      </h1>
+      <ul class="cocktail-list ingredients__js"></ul>
+      <div class="not-found dark-theme-text"></div>
+      <div class="pagination" id="pagination"></div>
+      <include src="./partials/cocktails-modal.html"></include>
+    </section>
+
+    <include src="./partials/footer.html"></include>
+
+    <include src="./partials/ingredients-modal.html"></include>
+    <script type="module" src="./js/favorite-cocktails.js"></script>
+
+    <!-- <script type="module" src="./js/index.js"></script> -->
+  </body>
+</html>

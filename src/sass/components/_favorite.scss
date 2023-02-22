@@ -1,0 +1,96 @@
+.flex-1 {
+  flex: 1 1 0;
+}
+
+.main-section {
+  padding-top: 60px;
+  padding-bottom: 170px;
+
+  .base-title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 60px;
+
+    &--cocktails {
+        margin-bottom: 32px;
+      }
+    @include tablet {
+      font-size: 32px;
+    }
+
+    @include desktop {
+      font-size: 48px;
+    }
+  }
+
+  .card-item {
+    &__info {
+      padding: 20px 20px 0;
+    }
+
+    &__name {
+      font-weight: 900;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    &__details {
+      display: block;
+      height: 16.1px;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+  }
+
+  .card-list {
+    display: grid;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 28px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+}
+
+.favorite-ingredients {
+  .button-wrap {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.cocktail-item__learn-more,
+.cocktail-item__remove {
+  transition: color 250ms $timing-function,
+    background-color 250ms $timing-function;
+}
+
+.not-found {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 3;
+  text-align: center;
+  color: $black-color;
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 2.5;
+  }
+  @include desktop {
+    font-size: 32px;
+    line-height: 2.25;
+  }
+}

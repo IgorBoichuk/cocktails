@@ -1,0 +1,241 @@
+.hero {
+  @include mobile {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  @include tablet {
+    padding-top: 77px;
+    padding-bottom: 120px;
+  }
+  @include desktop {
+    padding-top: 97px;
+    padding-bottom: 120px;
+  }
+}
+
+.hero__title {
+  width: 300px;
+  height: 76px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: calc(42 / 22);
+  color: $grapefruit-color;
+  margin-bottom: 60px;
+  @include tablet {
+    width: 336px;
+    height: 84px;
+    font-size: 26px;
+    line-height: calc(42 / 26);
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    width: 688px;
+    height: 160px;
+    font-size: 52px;
+    line-height: calc(80 / 52);
+  }
+}
+
+
+.hero-container {
+  display: flex;
+  flex-direction: column;  
+  @include tablet{
+    flex-direction: row;
+    gap: 32px;
+  }
+  @include desktop{
+    gap: 59px;
+  }
+}
+
+.mobile-hero__picture{
+  margin-bottom: 60px;
+  @include tablet{
+    display: none;
+  }
+}
+
+.hero__picture {
+display: none;
+@include tablet{
+  display: block;
+}
+}
+
+.hero__text {
+  @include mobile {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(28 / 14);
+    letter-spacing: 0.02em;
+    color: #000000;
+    margin-bottom: 20px;
+    width: 324px;
+  }
+  @include tablet {
+    color: #202025;
+    height: 28px;
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    font-size: 18px;
+    width: 600px;
+    font-size: 18px;
+  }
+}
+
+.mobile-wrapper {
+  @include tablet {
+    display: none;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-wrapper-select {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  gap: 14px;
+  width: 93px;
+  height: 34px;
+  border: 1px solid $grapefruit-color;
+  border-radius: 4px;
+  justify-content: space-between;
+}
+
+.mobile-wrapper-select.active {
+  background-color: $grapefruit-color;
+  color: $white-color;
+}
+
+.mobile-wrapper-select.active .hero__select-text {
+  color: $white-color;
+}
+
+.mobile-wrapper-select.active .arrow__icon {
+  fill: $white-color;
+}
+
+// .list-mobile-filter {
+//   transition-property: opacity;
+//   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+// }
+
+.hero__select-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.35;
+  color: $grapefruit-color;
+}
+
+.arrow__icon {
+  fill: $grapefruit-color;
+}
+
+.mobile-list-letters {
+  width: 93px;
+  max-height: 84px;
+  border: 1px solid $grapefruit-color;
+  border-radius: 4px;
+  overflow-y: scroll;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mobile-word {
+  width: 36px;
+  height: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: calc(15 / 10);
+  display: flex;
+  align-items: center;
+  color: $gray-color;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  &:hover {
+    color: $grapefruit-color;
+  }
+}
+
+.wrapper-tablet-desktop-filter {
+  display: none;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    width: 312px;
+  }
+}
+
+.list-letters {
+  @include tablet {
+    width: 312px;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: inline-flex;
+    @include desktop {
+      width: 520px;
+    }
+  }
+}
+
+.list-letters-number {
+  width: 288px;
+  display: flex;
+  justify-content: center;
+  @include desktop {
+    width: 480px;
+  }
+}
+
+.word {
+  width: 24px;
+  height: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(21 / 14);
+  color: $gray-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include tablet {
+    transition: transform 250ms linear;
+    
+    &:hover{
+      transform: scale(1.7) rotate(1turn);
+      color: $grapefruit-color;
+    }
+  }
+  @include desktop {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    line-height: calc(36 / 24);
+    cursor: pointer;
+  }
+}
+
+.word.active {
+  color: $grapefruit-color;
+  @include tablet {
+    font-size: 16px;
+    text-shadow: 0px 4px 4px rgba(95, 103, 117, 0.25);
+  }
+  @include desktop {
+    font-size: 26px;
+  }
+}
+
+

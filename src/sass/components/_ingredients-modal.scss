@@ -1,0 +1,239 @@
+.modal-drink-ingredients {
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  position: absolute;
+  font-family: 'Poppins', 'sans-serif';
+  top: 10%;
+  left: 50%;
+  width: 320px;
+  // height: 100vh;
+
+  padding: 40px 20px;
+  
+  background-color: $white-color;
+  transform: translate(-50%, -0%);
+  @media screen and (min-width: 768px) {
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 40px 28px 28px 28px;
+    height: 557px;
+    width: 715px;
+    // min-height: 100%;
+  }
+}
+
+.button-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &__icon {
+    position: absolute;
+    transition: 250ms fill $timing-function;
+    // fill: $black-color;
+  }
+  &:hover,
+  &:focus {
+    .button-modal-close__icon {
+       fill: $auxiliary-orange-color;
+    }
+   
+  }
+}
+
+.button-modal-close-light {
+  &__icon {
+    fill: $black-color;
+  }
+
+}
+
+.button-modal-close-dark {
+
+  &__icon {
+    fill: $white-color; 
+  }
+ 
+  
+}
+
+
+.drink-name {
+  font-family: 'Roboto', 'sans-serif';
+
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 1.19;
+  color: $black-color;
+
+  margin-bottom: 20px;
+  @include tablet {
+    margin-bottom: 28px;
+  }
+}
+.drink-category {
+  font-family: 'Poppins', 'sans-serif';
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  text-transform: uppercase;
+
+  /* Black */
+
+  color: $black-color;
+
+  margin-bottom: 20px;
+  @include tablet {
+    margin-bottom: 40px;
+  }
+}
+
+.drink-category--wrapper {
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+
+  display: block;
+
+  height: 1px;
+  margin-bottom: 28px;
+
+  @include tablet {
+    visibility: visible;
+    pointer-events: auto;
+    position: relative;
+  }
+}
+.drink-category--line {
+  position: absolute;
+
+  width: 715px;
+  height: 0px;
+  left: -28px;
+  top: -8px;
+
+  /* Grapefruit */
+
+  border: 1px solid $grapefruit-color;
+}
+
+.drink-description {
+  font-family: 'Poppins', 'sans-serif';
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.75;
+
+  /* Gray */
+
+  color: $gray-color;
+
+  margin-bottom: 28px;
+
+  &--marked-word {
+    font-family: 'Poppins', 'sans-serif';
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.75;
+    color: $black-color;
+  }
+}
+.drink-classification-list {
+  margin-bottom: 32px;
+  @include tablet {
+    margin-bottom: 40px;
+  }
+}
+.drink-classification-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  color: $gray-color;
+
+  line-height: 1.62;
+}
+
+// .classification {
+//   transition: 250ms color $timing-function;
+//   cursor: pointer;
+//   &:hover,
+//   &:focus {
+//     color: $auxiliary-orange-color;
+//   }
+// }
+
+.drink-controller-btn {
+  background-color: $grapefruit-color;
+  border-color: transparent;
+  border-radius: 4px;
+  padding: 12px 24px;
+  cursor: pointer;
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin: 0 0 0 auto;
+    transition: 250ms background-color $timing-function;
+  }
+  &:hover,
+  &:focus {
+    background-color: $button-hover-color;
+
+    .drink-controller-btn--name {
+      color: $grapefruit-color;
+    }
+  }
+}
+.drink-controller-btn--name {
+  font-family: 'Roboto', 'sans-serif';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: $white-color;
+  transition: 250ms color $timing-function;
+}
+
+.modal-ingredients-light-color {
+  color: $white-color;
+}
+
+.modal-ingredients-fill {
+  fill: $white-color ;
+}
+
+.modal-ingredients-fill-black {
+  fill: $black-color ;
+}
+
+.modal-light-grey {
+  color: #BDBDBD;
+}
+
+
+.modal-first-word-of-description-light {
+   font-family: 'Poppins', 'sans-serif';
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.75;
+    color: $black-color;
+}
+
+.modal-first-word-of-description-dark {
+   font-family: 'Poppins', 'sans-serif';
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.75;
+    color: $white-color;
+}

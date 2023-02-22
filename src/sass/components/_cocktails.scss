@@ -1,0 +1,251 @@
+button{
+  cursor: pointer;
+}
+
+.cocktail-list {
+    @include mobile{
+        gap: 20px;
+        padding-bottom: 24px;
+    }
+    @include tablet{
+        gap: 32px;
+        padding-bottom: 22px;
+    }
+    @include desktop{
+        gap: 31px;
+        padding-bottom: 28px;
+    }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.cocktail-list__cocktail-item {
+  @include mobile {
+    width: 280px;
+  }
+  @include tablet {
+    width: 335px;
+  }
+  @include desktop {
+    width: 395px;
+  }
+  border: 1px solid $auxiliary-orange-color;
+  border-radius: 4px;
+}
+
+.svg-dark-theme{
+  fill: #FCFCFC;
+  pointer-events: none;
+}
+
+.svg-light{
+  fill: #202025;
+  pointer-events: none;
+}
+
+.name-dark{
+  color: #202025;
+}
+
+.name-light{
+  color: #FCFCFC;
+}
+
+.cocktail-item__add-to {
+  @include mobile {
+    width: 110px;
+    height: 39px;
+    font-size: 14px;
+  }
+  @include tablet {
+    width: 123px;
+    height: 48px;
+    font-size: 20px;
+  }
+  @include desktop {
+    width: 141px;
+  }
+  position: relative;
+  background-color: transparent;
+ 
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  color: $auxiliary-orange-color;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  transition: all 250ms $timing-function;
+  &:hover{
+    background-color: $button-hover-color;
+  }
+  &:hover .svg{
+    fill: $button-hover-color;
+  }
+  &:active{
+    background-color: transparent;
+  }
+  &:active .svg{
+    fill: transparent;
+  }
+  border-style: none;
+  border: 2px solid $auxiliary-orange-color;
+}
+
+.cocktail-item__remove {
+  @include mobile {
+    width: 110px;
+    height: 39px;
+    font-size: 14px;
+  }
+  @include tablet {
+    width: 123px;
+    height: 48px;
+    font-size: 20px;
+  }
+  @include desktop {
+    width: 141px;
+  }
+  position: relative;
+  background-color: transparent;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  color: $auxiliary-orange-color;
+  font-family: 'Roboto', sans-serif;
+  
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  transition: all 250ms $timing-function;
+  &:hover{
+    background-color: $button-hover-color;
+  }
+  &:active{
+    background-color: transparent;
+  }
+  border-style: none;
+  border: 2px solid $auxiliary-orange-color;
+}
+
+.cocktail-item__learn-more {
+  @include mobile {
+    width: 108px;
+    height: 39px;
+    font-size: 14px;
+  }
+  @include tablet {
+    width: 160px;
+    height: 48px;
+    font-size: 20px;
+  }
+  @include desktop{
+    width: 182px;
+  }
+  position: relative;
+  background-color: $auxiliary-orange-color;
+  border-radius: 4px;
+  color: $white-color;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  transition: all 250ms $timing-function;
+  &:hover{
+    background-color: $button-hover-color;
+    color: $auxiliary-orange-color;
+  }
+  &:active{
+    background-color: $auxiliary-orange-color;
+    color: $white-color;
+  }
+  border-style: none;
+  border: 2px solid $auxiliary-orange-color;
+}
+
+.button-wrap {
+  @include mobile{
+    margin-bottom: 24px;
+    gap: 17px;
+  }
+  @include tablet{
+    margin-bottom: 22px;
+    gap: 12px;
+  }
+  @include desktop{
+    margin-bottom: 28px;
+    gap: 16px;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cocktail-item__name {
+  @include mobile {
+    margin: 48px auto 16px;
+    font-size: 26px;
+  }
+  @include tablet {
+    margin: 20px auto 27px;
+    font-size: 28px;
+    height: 70px;
+  }
+  @include desktop {
+    font-size: 32px;
+    margin: 15px auto 23px;
+    height: 70px;
+  }
+  padding: 10px;
+  display: flex;
+  width: fit-content;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  align-items: center;
+}
+
+.cocktail-title-main{
+  @include mobile{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+  }
+  @include tablet{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+  }
+  @include desktop{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+  }
+  margin: 0 auto 60px;
+  padding: 0;
+  font-style: normal;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.cocktail-item_img{
+  border-radius: 3px;
+}
+
+.not-found{
+  display: flex;
+  justify-content: center;
+}
+
+.cocktail-section{
+  margin-bottom: 170px;
+}

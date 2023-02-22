@@ -1,0 +1,130 @@
+.pagination {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.21;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media screen and (min-width: 1280px) {
+    padding-left: 150px;
+    padding-right: 150px;
+    justify-content: space-evenly;
+  }
+}
+
+.pagination-pages {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  @media screen and (min-width: 768px) {
+    gap: 14px;
+  }
+}
+
+.pagination-button {
+  color: $auxiliary-orange-color;
+  background-color: transparent;
+  border: 1px solid #eaebea;
+  padding-top: 8px;
+  padding-bottom: 7px;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 768px) {
+    width: 40px;
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  &:hover,
+  &:focus {
+    color: #fdfdfd;
+    background-color: $auxiliary-orange-color;
+  }
+  &__active {
+    color: #fdfdfd;
+    background-color: $auxiliary-orange-color;
+  }
+}
+
+.pagination-button--dark-theme {
+  border-color: #4f4e4e;
+  &:hover,
+  &:focus {
+    color: $black-color;
+  }
+}
+
+.pagination-button__active--dark-theme {
+  color: $black-color;
+}
+
+.pagination-button-arrow {
+  display: none;
+  background-color: transparent;
+  border: transparent;
+  width: 32px;
+  height: 32px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 768px) {
+    display: block;
+    border: 1px solid #eaebea;
+    border-radius: 4px;
+    width: 60px;
+    height: 40px;
+  }
+  &:hover,
+  &:focus {
+    @media screen and (min-width: 768px) {
+      background-color: $auxiliary-orange-color;
+    }
+  }
+  &:hover .pagination-svg,
+  &:focus .pagination-svg {
+    fill: #fdfdfd;
+  }
+  &:hover .pagination-svg--dark-theme,
+  &:focus .pagination-svg--dark-theme {
+    fill: $black-color;
+  }
+}
+
+.pagination-button-arrow--dark-theme {
+  border-color: #4f4e4e;
+}
+
+.pagination-svg {
+  fill: $auxiliary-orange-color;
+  &:hover,
+  &:focus {
+    fill: #fdfdfd;
+  }
+  &--prev {
+    transform: rotate(180deg);
+  }
+}
+
+.pagination-svg--dark-theme {
+  &:hover,
+  &:focus {
+    fill: $black-color;
+  }
+}
+
+.pagination-button-arrow:disabled {
+  background-color: transparent;
+  cursor: auto;
+}
+
+.pagination-button-arrow:disabled .pagination-svg {
+  fill: #eaebea;
+}
+
+.pagination-button-arrow:disabled .pagination-svg--dark-theme {
+  fill: #4f4e4e;
+}
