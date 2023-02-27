@@ -2,7 +2,6 @@ import { fetchDrinksByName } from './fetchFunction';
 import { renderCocktail } from './render_function_for_cocktail';
 import { sliceArray, resetPagination, generatePagination } from './pagination';
 
-
 const svg = require('../images/icons.svg');
 
 const burgerMenuOpen = document.querySelector('[data-burger-menu-toggle]');
@@ -49,7 +48,6 @@ async function onHeaderSubmit(event) {
     return;
   }
   const responce = await fetchDrinksByName(drinkName);
-  
 
   if (responce.drinks === null) {
     cocktailList.innerHTML = '';
@@ -63,6 +61,8 @@ async function onHeaderSubmit(event) {
       <use href="${svg}#icon-not-found"></use>
       </svg>`;
     document.querySelector('.pagination').innerHTML = '';
+    formHeader.reset();
+
     return;
   }
   generatePagination(responce);
@@ -72,6 +72,18 @@ async function onHeaderSubmit(event) {
   const slicedArray = sliceArray(responce.drinks);
   const markup = await renderCocktail(slicedArray);
   cocktailList.insertAdjacentHTML('beforeend', markup.join(''));
+  onSwitch();
+  formHeader.reset();
+}
+
+function onSwitch(target) {
+  const arrayItem = document.querySelectorAll('.word');
+  const prevActiveItem = [...arrayItem].find(item =>
+    item.classList.contains('active')
+  );
+  if (prevActiveItem) {
+    prevActiveItem.classList.remove('active');
+  }
 }
 
 async function onBurgerSubmit(event) {
@@ -115,6 +127,7 @@ async function onBurgerSubmit(event) {
   const markup = await renderCocktail(slicedArray);
   cocktailList.insertAdjacentHTML('beforeend', markup.join(''));
   body.classList.toggle('unscroll-body');
+  onSwitch();
 }
 
 // -----------burger-menu-favorite---------------
